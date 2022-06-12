@@ -12,7 +12,7 @@ const routes = {
 };
 
 const router = async () => {
-  const header = null || document.getElementById("header");
+  const header = null || document.getElementById("Header");
   const content = null || document.getElementById("content");
 
   header.innerHTML = await Header();
