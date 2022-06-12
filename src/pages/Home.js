@@ -9,6 +9,8 @@ const Home = () => {
 			</article>
 		</div>
 	`;
+
+  // return view;
 };
 
 export default Home;
