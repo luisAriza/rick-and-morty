@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -28,6 +29,10 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
     ],
   },
   plugins: [
@@ -36,6 +41,9 @@ module.exports = {
       template: "./public/index.html",
       favicon: "./public/favicon.ico",
       filename: "./index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "stylesheet.css",
     }),
     new CleanWebpackPlugin(),
   ],
