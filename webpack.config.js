@@ -9,6 +9,14 @@ module.exports = {
   },
   resolve: {
     extensions: [".js"],
+    alias: {
+      template: path.resolve(__dirname, "src/templates/"),
+      page: path.resolve(__dirname, "src/pages/"),
+      route: path.resolve(__dirname, "src/routes/"),
+      util: path.resolve(__dirname, "src/utils/"),
+      style: path.resolve(__dirname, "src/styles/"),
+      public: path.resolve(__dirname, "public/"),
+    },
   },
   module: {
     rules: [
