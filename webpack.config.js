@@ -1,11 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { ModuleFilenameHelpers } = require("webpack");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dis/"),
+    path: path.resolve(__dirname, "dist/"),
     filename: "bundle.js",
   },
   resolve: {
@@ -17,7 +16,7 @@ module.exports = {
         test: /\.js.?$/,
         exclude: /node_modules/,
         use: {
-          loader: "loader-babel",
+          loader: "babel-loader",
         },
       },
     ],
@@ -26,7 +25,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: "./public/index.html",
-      favicon: "./public/favicon.svg",
+      favicon: "./public/favicon.ico",
       filename: "./index.html",
     }),
   ],
