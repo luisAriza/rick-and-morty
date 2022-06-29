@@ -10,7 +10,7 @@ const Home = async () => {
           (character) => `
 				<article class="character-item">
 					<a href="#/${character.id}/">
-						<img src="${character.image}" alt="${character.name}">
+						<img loading="lazy" src="${character.image}" alt="${character.name}">
 						<h2>${character.name}</h2>
 					</a>
 				</article>

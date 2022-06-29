@@ -1,6 +1,7 @@
 import Header from "template/Header";
 import Home from "page/Home";
 import Character from "page/Character";
+import About from "page/About";
 import Error404 from "page/Error404";
 import getHash from "util/getHash";
 import resolveRoutes from "util/resolveRoutes";
@@ -8,12 +9,12 @@ import resolveRoutes from "util/resolveRoutes";
 const routes = {
   "/": Home,
   "/:id": Character,
-  "/contact": "contact",
+  "/about": About,
 };
 
 const router = async () => {
   const header = null || document.getElementById("Header");
-  const content = null || document.getElementById("content");
+  const content = null || document.getElementById("Content");
 
   header.innerHTML = await Header();
   let hash = getHash();

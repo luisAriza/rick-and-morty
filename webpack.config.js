@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
@@ -38,15 +39,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       meta: { "theme-color": "#222" },
-      title: "Rick and Morty",
-      inject: "body",
       favicon: "./public/favicon.ico",
-      template: "./public/index.html",
       filename: "./index.html",
+      template: "./public/index.html",
+      inject: "body",
     }),
     new MiniCssExtractPlugin({
       filename: "stylesheet.css",
     }),
     new CleanWebpackPlugin(),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin()],
+  },
 };
