@@ -1,19 +1,17 @@
+import logo from "asset/logo.svg";
+
 const Header = () => {
   const view = `
-		<div class="header-main">
-			<div class="header-logo">
-				<h1>
-					<a href="/">
-						100tifi.co
-					</a>
-				</h1>
-				<div class="header-nav">
-					<a href="#/about/">
-						About
-					</a>
-				</div>
-			</div>
-		</div>
+		<figure class="header__logo">
+			<a href="/">
+				<img src=${logo} width="240" height="72" alt="logo"/>
+			</a>
+		</figure>
+		<nav class="header__nav">
+			<a href="#/about/">
+				About
+			</a>
+		</nav>
 	`;
 
   return view;
