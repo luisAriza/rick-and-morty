@@ -1,17 +1,15 @@
-import logo from "asset/Rick_and_Morty_Logo_and_Image.png";
+import icon from "asset/logo2.png";
 
 const Header = () => {
   const view = `
 		<nav class="header__nav">
+			<a href="/" class="header__logo">
+				<img src=${icon} width="48" height="48" alt="Icono favicon" />
+			</a>
 			<a href="#/about/">
 				About
 			</a>
 		</nav>
-		<figure class="header__logo">
-			<a href="/">
-				<img src=${logo} width="240" height="72" alt="logo"/>
-			</a>
-		</figure>
 	`;
 
   return view;

@@ -1,9 +1,11 @@
 import getData from "util/getData";
+import logo from "asset/logo.svg";
 
 const Home = async () => {
   const characters = await getData();
 
   const view = `
+		<img class="main__logo" src=${logo} width="100" height="32" alt="Logo"/>
 		<h2 class="main__title">Characters</h2>
 		<div class="characters">
 			${characters.results

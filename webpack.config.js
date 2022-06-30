@@ -45,7 +45,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg)/,
+        test: /\.(png|svg|jpg|jpeg|webp|gif)/,
         type: "asset/resource",
       },
       {
@@ -59,7 +59,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      meta: { "theme-color": "#2d2d2d" },
+      meta: { "theme-color": "#bfde42" },
       favicon: "./public/favicon.ico",
       filename: "./index.html",
       template: "./public/index.html",
