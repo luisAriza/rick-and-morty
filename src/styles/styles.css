@@ -135,10 +135,12 @@ body {
   padding: 32px 20px;
   color: var(--primary-color);
   font-size: large;
+  text-decoration: underline;
   font-variation-settings: "wght" 400;
 }
 .character-item a:hover h2 {
   color: var(--secondary-color);
+  text-decoration: none;
 }
 
 .character-inner {
@@ -178,6 +180,50 @@ body {
   font-size: medium;
   font-variation-settings: "wght" 300;
   color: var(--light-grey);
+}
+
+.about {
+  display: grid;
+  gap: 20px;
+  color: var(--light-color);
+  text-align: start;
+}
+.about__title {
+  font-size: xx-large;
+  font-variation-settings: "wght" 700;
+  letter-spacing: 2px;
+}
+.about__subtitle {
+  font-size: large;
+  font-variation-settings: "wght" 600;
+  color: var(--light-grey);
+  margin-top: 12px;
+}
+.about__description {
+  line-height: 22px;
+}
+.about__description a {
+  color: var(--primary-color);
+  font-variation-settings: "wght" 700;
+}
+.about__description a:hover {
+  color: #bfde42;
+  text-decoration: none;
+}
+.error404 {
+  color: var(--light-color);
+}
+.error404 h2 {
+  color: var(--grey);
+  font-size: 154px;
+  font-variation-settings: "wght" 600;
+}
+.error404 p {
+  font-size: x-large;
+  font-variation-settings: "wght" 500;
+  text-align: center;
+  position: relative;
+  bottom: 112px;
 }
 
 @media (min-width: 480px) {

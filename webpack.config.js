@@ -59,7 +59,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      meta: { "theme-color": "#f4f4f4" },
+      meta: { "theme-color": "#bfde42" },
       favicon: "./public/favicon.ico",
       filename: "./index.html",
       template: "./public/index.html",
